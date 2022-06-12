@@ -7,7 +7,7 @@ node{
     }
 
     stage("Tagging"){
-        sh "properties([parameters([string(defaultValue: '736098766695', description: 'Please provide your account', name: 'AWS_ACCOUNT', trim: true)])])"
+        sh "docker tag tools:latest ${AWS_ACCOUNT}.dkr.ecr.us-east-2.amazonaws.com/tools:latest"
     }
 
     Stage("Autheticate"){
