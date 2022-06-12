@@ -5,5 +5,8 @@ node{
     stage("Build"){
         sh "docker build -t tools ."
     }
+    stage("Push Image"){
+        sh "docker push 736098766695.dkr.ecr.us-east-2.amazonaws.com/tools:latest"
+    }
 
 }
