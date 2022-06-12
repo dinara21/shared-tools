@@ -15,7 +15,7 @@ node{
 
     }
     stage("Push Image"){
-        sh "docker push 736098766695.dkr.ecr.us-east-2.amazonaws.com/tools:latest"
+        sh "docker push ${AWS_ACCOUNT}.dkr.ecr.us-east-2.amazonaws.com/tools:latest"
     }
 
 }
